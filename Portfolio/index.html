@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AhmedAlbuAli Portfolio</title>
+<style>
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff8ef;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #ffbe76;
+opacity:80%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0;
+  margin: 0;
+}
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li a:hover {
+  color: #2d3436;
+}
+
+/* HERO IMAGE WITH TEXT */
+.hero-section {
+  position: relative;
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* CENTERED IMAGE */
+.centered-img-section {
+  text-align: center;
+  margin: 2em 0;
+}
+.profile-img {
+  border-radius: 20px;
+  filter: grayscale(20%) brightness(110%);
+}
+
+/* TWO COLUMN LAYOUT */
+.columns {
+  display: flex;
+  margin: 2em;
+}
+.column {
+  width: 50%;
+  padding: 1em;
+  height: 250px;
+}
+.left {
+  background-color: #f6e58d;
+  color: #000;
+}
+.right {
+  background-color: #ffbe76;
+  color: #000;
+}
+
+/* TABLE STYLING */
+.table-section {
+  padding: 2em;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 2px solid #ffbe76;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: #ffbe76;
+  color: white;
+}
+
+/* PARAGRAPH HOVER */
+.hover-para {
+  text-align: center;
+  margin: 2em;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.hover-para:hover {
+  color: #ff9f43;
+}
+
+/* IMAGE OVERLAY FADE */
+.img-overlay-container {
+  position: relative;
+  width: 500px;
+  margin: 2em auto;
+}
+.img-overlay-container img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 190, 118, 0.8);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 0 0 10px 10px;
+}
+.img-overlay-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  text-align: center;
+  margin: 2em 0;
+}
+.video-section video {
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* VIDEO TEXT OVERLAY */
+.video-container {
+  position: relative;
+  width: 80%;
+  margin: 2em auto;
+}
+.video-container video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.video-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #ffbe76;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#table">Table</a></li>
+      <li><a href="#video">Video</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO IMAGE WITH TEXT -->
+  <section class="hero-section">
+    <img src="https://cdn.pixabay.com/photo/2024/10/12/09/31/foliage-9114855_1280.jpg" alt="Hero" class="hero-img">
+    <div class="hero-text">Welcome to My Portfolio</div>
+  </section>
+
+  <!-- CENTERED IMAGE WITH FILTERS & ROUNDED EDGES -->
+  <section class="centered-img-section">
+    <img src="https://cdn.pixabay.com/photo/2024/10/12/09/31/foliage-9114855_1280.jpg" alt="Leaf" class="profile-img" />
+  </section>
+
+  <!-- TWO COLUMN LAYOUT -->
+  <section id="about" class="columns">
+    <div class="column left">
+      <h2>About Me</h2>
+      <p>Hello! I’m AhmedAlbuAli, a passionate student learning web development.</p>
+    </div>
+    <div class="column right">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript (Next Course)</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TABLE -->
+  <section id="table" class="table-section">
+    <h2>Course Schedule</h2>
+    <table>
+      <tr>
+        <th>Course</th>
+        <th>Time</th>
+        <th>Day</th>
+      </tr>
+      <tr>
+        <td>Web Dev</td>
+        <td>10:00 AM</td>
+        <td>Mon & Wed</td>
+      </tr>
+     
+    </table>
+  </section>
+
+  <!-- PARAGRAPH WITH HOVER EFFECT -->
+  <section class="hover-text-section">
+    <p class="hover-para">Hover over this paragraph!</p>
+  </section>
+
+  <!-- IMAGE OVERLAY FADE -->
+  <section id="video" class="image-overlay-section">
+    <div class="img-overlay-container">
+      <img src="https://cdn.pixabay.com/photo/2024/10/12/09/31/foliage-9114855_1280.jpg" alt="Overlay Image" />
+      <div class="overlay-text">Overlay Text on Hover</div>
+    </div>
+  </section>
+
+  <!-- AUTOPLAY VIDEO -->
+  <section class="video-section">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2025/09/06/302098_tiny.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </section>
+
+  <!-- VIDEO WITH TEXT OVERLAY -->
+  <section class="video-text-overlay-section">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2023/10/21/185947-876963225_tiny.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="video-overlay-text">Nature is so beautiful</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 AhmedAlbuAli | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
